@@ -7,6 +7,7 @@ div.non-collapsible-section { display:none !important }
 
 @-moz-document url(about:privatebrowsing) {
 
-.search-inner-wrapper, .wordmark, .info-border { display:none !important }
+.search-inner-wrapper, .logo-and-wordmark { display:none !important }
+.info { margin-top:0px !important; }
 
 }

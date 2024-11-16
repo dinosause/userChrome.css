@@ -97,6 +97,7 @@ toolbar#nav-bar {
 #identity-box, /* Site information */
 #tracking-protection-icon-container, /* Shield icon */
 #page-action-buttons > :not(#urlbar-zoom-button, #star-button-box), /* All url bar icons except for zoom level and bookmarks */
+label[data-l10n-id="private-browsing-indicator-label"],
 #urlbar-go-button, /* Search URL magnifying glass */
 #alltabs-button /* Menu to display all tabs at the end of tabs bar */
 {
