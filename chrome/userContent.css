@@ -1,0 +1,12 @@
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {    
+
+/* Hide logo and search bar */
+div.non-collapsible-section { display:none !important }
+
+}
+
+@-moz-document url(about:privatebrowsing) {
+
+.search-inner-wrapper, .wordmark, .info-border { display:none !important }
+
+}
