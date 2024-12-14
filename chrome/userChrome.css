@@ -78,6 +78,10 @@ toolbar#nav-bar {
     }
 }
 
+.tab-close-button {
+   display:none;
+}
+
 /*====== Simplifying interface ======*/
 
 /* Autohide back button when disabled */
