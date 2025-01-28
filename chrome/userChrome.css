@@ -64,6 +64,7 @@ toolbar#nav-bar {
 
     /* Bookmarks bar */
     #PersonalToolbar {
+        background-color: var(--accent-color) !important;
         order: 3;
         width: 100%;
     }
@@ -76,10 +77,6 @@ toolbar#nav-bar {
     :root[uidensity="touch"] #urlbar {
         --urlbar-toolbar-height: 49.00px !important;
     }
-}
-
-.tab-close-button {
-   display:none;
 }
 
 /*====== Simplifying interface ======*/
@@ -101,8 +98,9 @@ toolbar#nav-bar {
 #identity-box, /* Site information */
 #tracking-protection-icon-container, /* Shield icon */
 #page-action-buttons > :not(#urlbar-zoom-button, #star-button-box), /* All url bar icons except for zoom level and bookmarks */
-label[data-l10n-id="private-browsing-indicator-label"],
+label[data-l10n-id="private-browsing-indicator-label"], /* Private Browsing label*/
 #urlbar-go-button, /* Search URL magnifying glass */
+.tab-close-button, /* Close tab button */
 #alltabs-button /* Menu to display all tabs at the end of tabs bar */
 {
     display: none !important;
