@@ -23,7 +23,7 @@ toolbar#nav-bar {
 }
 
 /* Sets the URL bar color */
-#urlbar {
+#urlbar, #PersonalToolbar {
     background: var(--accent-color) !important;
 }
 
@@ -36,47 +36,13 @@ toolbar#nav-bar {
     border: none !important;
 }
 
-/*====== UI Settings ======*/
-
-:root {
-    --navbarWidth: 550px; /* Set width of navbar */
+/* Fix urlbar sometimes being misaligned */
+:root[uidensity="compact"] #urlbar {
+    --urlbar-toolbar-height: 39.60px !important;
 }
 
-/* If the window is wider than 1000px, use flex layout */
-@media (min-width: 1000px) {
-    #navigator-toolbox {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    /*  Url bar  */
-    #nav-bar {
-        order: 1;
-        width: var(--navbarWidth);
-    }
-
-    /* Tab bar */
-    #titlebar {
-        order: 2;
-        width: calc(100vw - var(--navbarWidth) - 1px);
-    }
-
-    /* Bookmarks bar */
-    #PersonalToolbar {
-        background-color: var(--accent-color) !important;
-        order: 3;
-        width: 100%;
-    }
-    
-    /* Fix urlbar sometimes being misaligned */
-    :root[uidensity="compact"] #urlbar {
-        --urlbar-toolbar-height: 39.60px !important;
-    }
-
-    :root[uidensity="touch"] #urlbar {
-        --urlbar-toolbar-height: 49.00px !important;
-    }
+:root[uidensity="touch"] #urlbar {
+    --urlbar-toolbar-height: 49.00px !important;
 }
 
 /*====== Simplifying interface ======*/
@@ -97,11 +63,10 @@ toolbar#nav-bar {
 /* Remove UI elements */
 #identity-box, /* Site information */
 #tracking-protection-icon-container, /* Shield icon */
-#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box), /* All url bar icons except for zoom level and bookmarks */
-label[data-l10n-id="private-browsing-indicator-label"], /* Private Browsing label*/
-#urlbar-go-button, /* Search URL magnifying glass */
-.tab-close-button, /* Close tab button */
-#alltabs-button /* Menu to display all tabs at the end of tabs bar */
+#page-action-buttons > :not(#urlbar-zoom-button, #star-button-box),
+label[data-l10n-id="private-browsing-indicator-label"],
+#urlbar-go-button,
+.tab-close-button
 {
     display: none !important;
 }
@@ -125,17 +90,4 @@ label[data-l10n-id="private-browsing-indicator-label"], /* Private Browsing labe
 > #tabbrowser-arrowscrollbox
 > .tabbrowser-tab[first-visible-unpinned-tab] {
     margin-inline-start: 0 !important;
-}
-
-/* Hide the hamburger menu */
-#PanelUI-menu-button { 
-    padding: 0px !important;
-}
-
-#PanelUI-menu-button .toolbarbutton-icon { 
-    width: 1px !important; 
-}
-
-#PanelUI-menu-button .toolbarbutton-badge-stack {
-    padding: 0px !important; 
 }
