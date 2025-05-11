@@ -66,6 +66,7 @@ toolbar#nav-bar {
 #page-action-buttons > :not(#urlbar-zoom-button, #star-button-box),
 label[data-l10n-id="private-browsing-indicator-label"],
 #urlbar-go-button,
+#tabs-newtab-button, .tabs-newtab-button,
 .tab-close-button
 {
     display: none !important;
